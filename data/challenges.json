@@ -1,0 +1,26 @@
+[
+  {
+    "id": "philippines-armed-actors",
+    "title": "Armed Actors – Philippines",
+    "region": "Southeast Asia / Mindanao",
+    "summary": "Multiple armed groups active across Mindanao and the Visayas. Key actors include MILF/Bangsamoro government forces, NPA, Abu Sayyaf, and BIFF.",
+    "status": "active",
+    "tags": ["armed conflict", "insurgency", "humanitarian access", "Mindanao"]
+  },
+  {
+    "id": "sahel-armed-actors",
+    "title": "Sahel – Armed Actors",
+    "region": "West Africa",
+    "summary": "Jihadist insurgencies, inter-community violence, and coup-related instability across Mali, Burkina Faso, and Niger.",
+    "status": "coming_soon",
+    "tags": ["armed conflict", "jihadist", "humanitarian access"]
+  },
+  {
+    "id": "myanmar-conflict",
+    "title": "Myanmar – Internal Conflict",
+    "region": "Southeast Asia",
+    "summary": "Post-coup armed resistance, ethnic armed organizations, and humanitarian access constraints across multiple fronts.",
+    "status": "coming_soon",
+    "tags": ["armed conflict", "humanitarian access", "ethnic groups"]
+  }
+]

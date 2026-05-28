@@ -1,0 +1,16 @@
+# dependencies
+node_modules/
+
+# env files — never commit these
+.env
+.env.local
+.env*.local
+
+# Next.js build output
+.next/
+out/
+
+# misc
+.DS_Store
+*.pem
+npm-debug.log*

@@ -1,0 +1,150 @@
+{
+  "id": "philippines-armed-actors",
+  "title": "Armed Actors – Philippines",
+  "region": "Southeast Asia / Mindanao",
+  "sources": [
+    {
+      "title": "CCHN Field Manual on Humanitarian Negotiation (2019)",
+      "url": "https://frontline-negotiations.org/wp-content/uploads/2019/11/CCHN-Field-Manual-EN.pdf"
+    },
+    {
+      "title": "OCHA Humanitarian Negotiations with Armed Groups Manual",
+      "url": "https://interagencystandingcommittee.org/sites/default/files/migrated/2014-12/Human_Neg_Manual.pdf"
+    },
+    {
+      "title": "Mercy Corps – Negotiating for Humanitarian Access Playbook (2018)",
+      "url": "https://www.mercycorps.org/sites/default/files/2019-11/NegotiatingForHumanitarianAccessPlaybook.pdf"
+    },
+    {
+      "title": "USIP – Toward Peace in the Southern Philippines",
+      "url": "https://www.usip.org/sites/default/files/resources/sr202.pdf"
+    },
+    {
+      "title": "USIP – Examining the Military's Soft Power Challenge in the Southern Philippines (2022)",
+      "url": "https://www.usip.org/publications/2022/02/examining-militarys-soft-power-challenge-southern-philippines"
+    },
+    {
+      "title": "USIP – Examining Women's Critical Role in Peacebuilding in the Southern Philippines (2022)",
+      "url": "https://www.usip.org/publications/2022/02/examining-womens-critical-role-peacebuilding-southern-philippines"
+    },
+    {
+      "title": "FDD / Modern War Institute – Lessons from the Philippines: Irregular Warfare in Action",
+      "url": "https://mwi.westpoint.edu/lessons-from-the-philippines-irregular-warfare-in-action/"
+    },
+    {
+      "title": "Harvard Humanitarian Initiative – Civil-Military Coordination in the Philippines",
+      "url": "https://hhi.harvard.edu/blog/principled-civil-military-coordination-disaster-response-needed"
+    },
+    {
+      "title": "Nonviolent Peaceforce – IHL Training Impact in the Philippines",
+      "url": "https://nonviolentpeaceforce.org/np-trainings-on-international-humanitarian-law-and-human-rights-make-positive-impact-in-the-philippines/"
+    },
+    {
+      "title": "The New Humanitarian – Engaging with Philippine Armed Groups (2013)",
+      "url": "https://www.thenewhumanitarian.org/analysis/2013/04/25/engaging-philippine-armed-groups"
+    },
+    {
+      "title": "Asia Foundation – Forging Sustainable Peace in Mindanao: The Role of Civil Society (2024)",
+      "url": "https://asiafoundation.org/wp-content/uploads/2024/05/Forging-Sustainable-Peace-in-Mindanao_The-Role-of-Civil-Society_Philippines-1.pdf"
+    },
+    {
+      "title": "FPRI – The People Are the Key: Irregular Warfare Success Story in the Philippines (2025)",
+      "url": "https://www.fpri.org/article/2025/04/the-people-are-the-key-irregular-warfare-success-story-in-the-philippines/"
+    }
+  ],
+  "situation_overview": "The Philippines hosts several distinct armed conflicts operating simultaneously and often geographically overlapping. The Bangsamoro region (Mindanao/BARMM) has a formal peace process in place following the 2014 Comprehensive Agreement on the Bangsamoro (CAB) and the 2019 Bangsamoro Organic Law. However, spoiler groups, MILF splinters, and separate communist insurgency (NPA) remain active. Field operators must differentiate carefully between actors, as engagement strategies, terminology preferences, and access conditions vary significantly by group.",
+  "armed_groups": [
+    {
+      "name": "MILF / Bangsamoro Islamic Armed Forces (BIAF)",
+      "type": "Former insurgency – now formal peace partner",
+      "geography": "Mindanao (BARMM region, Maguindanao, Lanao del Sur, North Cotabato)",
+      "status": "Peace process active. MILF has transitioned toward governance under the Bangsamoro Autonomous Region. BIAF nominally under Joint Peace and Security Teams (JPSTs) framework.",
+      "engagement_notes": "The MILF accepts 'armed non-state actor' framing and is generally receptive to humanitarian law concepts. Personal relationship-building is essential — MILF structures are hierarchical and decisions flow through recognized leadership. Coordination with BARMM government offices is now the primary access channel in their areas.",
+      "risks": "BIFF (splinter group) operates in same areas and does not respect MILF ceasefire. Do not assume MILF guarantees cover all actors in BARMM territory."
+    },
+    {
+      "name": "NPA – New People's Army",
+      "type": "Maoist insurgency (CPP-NPA-NDF)",
+      "geography": "Active in Mindanao (Davao, Caraga, Negros Island), Visayas (Samar, Leyte), Luzon (Sierra Madre, Cordillera). Estimated 2,000–4,000 fighters.",
+      "status": "Active armed conflict with AFP. No current peace talks. Listed as terrorist organization by Philippines, US, EU.",
+      "engagement_notes": "CRITICAL: The NPA rejects the term 'armed non-state actor' — they consider themselves the armed wing of a dual-power revolutionary government. Using this term will damage engagement. Preferred framing: 'revolutionary forces' or simply 'NPA'. Initial contact typically through legal front organizations (National Democratic Front). Engagement requires careful organizational mandate clarity — NPA will probe for AFP/government affiliation.",
+      "risks": "NPA conducts 'revolutionary taxation' (extortion) against businesses and NGOs in operating areas. Field staff must have clear organizational policy on this before deployment. NPA has targeted local government units, infrastructure, and perceived military informants."
+    },
+    {
+      "name": "Abu Sayyaf Group (ASG)",
+      "type": "Criminal-terrorist hybrid",
+      "geography": "Sulu archipelago (Jolo, Basilan, Tawi-Tawi), coastal Zamboanga",
+      "status": "Fragmented but active. Multiple factions with varying ideological alignment (some Islamic State-linked). Primary activities: kidnapping-for-ransom, extortion.",
+      "engagement_notes": "Standard humanitarian negotiation frameworks do not apply — ASG is primarily criminal and does not hold territory or population. Access in ASG areas requires AFP escort or prior AFP clearance. Do not attempt direct engagement without hostage negotiation specialists. Ransom payment has historically incentivized further kidnapping.",
+      "risks": "Kidnapping for ransom is primary revenue. All foreign nationals are high-value targets. Most NGOs maintain NO-GO policy for Sulu archipelago without exceptional security protocols."
+    },
+    {
+      "name": "BIFF – Bangsamoro Islamic Freedom Fighters",
+      "type": "MILF splinter / rejectionists",
+      "geography": "Maguindanao del Norte/Sur, North Cotabato (overlaps with MILF areas)",
+      "status": "Active armed conflict. Rejects Bangsamoro peace process. Some factions have declared allegiance to Islamic State.",
+      "engagement_notes": "Do not assume MILF guarantees or agreements cover BIFF areas. Separate access negotiations required. BIFF leadership is fragmented — local commander-level negotiation may be required for specific areas.",
+      "risks": "Operates in same geography as MILF, creating confusion. BIFF has targeted BARMM government officials and perceived peace process supporters."
+    }
+  ],
+  "lessons": [
+    {
+      "category": "Access Negotiation",
+      "lessons": [
+        "Most access agreements are bilateral — negotiate separately with each armed group in your operational area. Agreements with one group do not transfer to others, even in adjacent territory.",
+        "Both relational and transactional components matter: build trust over time (relational) while agreeing clearly on logistics, notification procedures, and scope (transactional). The CCHN Naivasha Grid framework is a useful planning tool.",
+        "The Principles of Humanity, Neutrality, Impartiality, and Operational Independence are your strongest negotiating tools. Armed groups that understand these principles are more predictable partners. Invest in explaining your mandate explicitly.",
+        "Most armed groups respond better to consistent presence over time than to episodic engagement. Field staff turnover is a major access risk — document and hand over relationships formally.",
+        "Prior notification of movement to all armed parties in the area is standard practice. Failure to notify increases risk of misidentification as hostile."
+      ]
+    },
+    {
+      "category": "Civil-Military Coordination",
+      "lessons": [
+        "Using AFP vehicles, uniforms, or convoys for humanitarian transport compromises neutrality and can make civilian staff targets for NPA or BIFF. Maintain visible separation from military assets.",
+        "Relief operations conducted with military assistance or political patronage criteria undermine humanitarian credibility. Establish and communicate need-based targeting criteria before operations.",
+        "Over 300 AFP, PNP, and humanitarian personnel have been trained in UN CMCoord concepts in the Philippines — use this shared framework as common language when coordinating.",
+        "In Bangsamoro areas, coordinate with BARMM government (not just AFP) — the regional government now has primary civilian authority.",
+        "AFP soft power (civil-military operations, livelihood projects) overlaps with humanitarian space. Establish clear differentiation of roles to protect humanitarian identity."
+      ]
+    },
+    {
+      "category": "Community Engagement",
+      "lessons": [
+        "In irregular warfare contexts, the human terrain is the key terrain. Invest in systematic community assessment — understanding grievances, local power structures, and existing support networks before beginning operations.",
+        "Women play critical and underappreciated roles in Mindanao peacebuilding — as informal mediators, community liaisons, and early-warning networks. Engage women leaders formally in access and community consultations.",
+        "Former combatants, including those in JPST structures, can be effective community liaisons and early-warning sources. Build these relationships explicitly.",
+        "Local civil society organizations have deeper trust networks than external actors. Co-design programming where possible rather than using local organizations purely as implementing partners.",
+        "Transparency and inclusivity in consultations are essential. Supreme Court rulings on the Mindanao peace process have demonstrated that exclusion of stakeholders from agreements causes collapse."
+      ]
+    },
+    {
+      "category": "Personnel Safety",
+      "lessons": [
+        "Establish and communicate your organization's policy on NPA 'revolutionary taxation' before deployment. There is no consensus best practice — but having no policy is the worst outcome.",
+        "Conduct individual-level security briefings for all staff, including local hires, on which armed groups are active in the specific municipality of operations.",
+        "Personal relationships between field staff and local military/police provide trust foundations but can compromise perceived neutrality. Manage this balance explicitly.",
+        "Counseling and psychological support for field personnel is under-resourced in Philippines operations. The Philippine Army experience shows that resilience, faith/community support, and structured debriefs are most effective coping mechanisms.",
+        "All foreign nationals face elevated kidnapping risk in Sulu, Basilan, and coastal Zamboanga. Trip wires: no solo movement, check-in protocols, pre-positioned emergency contacts."
+      ]
+    },
+    {
+      "category": "IHL and Norms Engagement",
+      "lessons": [
+        "Both MILF and NPA have shown responsiveness to IHL framing when approached by neutral organizations. MILF has engaged in formal Deeds of Commitment on child protection and women's rights through Geneva Call.",
+        "IHL training of both AFP and armed groups reduces civilian harm and creates shared reference points for access negotiation. Nonviolent Peaceforce has documented positive field impacts from this approach.",
+        "Engage armed groups on norms they already hold (respect for community, protection of civilians in their area of influence) before introducing external frameworks. Starting with IHL language can be counterproductive.",
+        "ICRC maintains neutral medical transport coordination between armed parties in the Philippines — this is a practical access mechanism field operators should know about and can reference in negotiations."
+      ]
+    },
+    {
+      "category": "Decision-Making Framework",
+      "lessons": [
+        "When assessing whether to operate in a contested area, evaluate: (1) which armed groups control access, (2) whether bilateral agreements are in place with each, (3) AFP clearance status, (4) community acceptance, and (5) organizational risk tolerance.",
+        "Go/No-Go decisions should be made at field coordinator level with HQ notification — not HQ-directed — for operational responsiveness. Define the escalation threshold in advance.",
+        "For new operating areas: prior community assessment → identify local contact with legitimacy across armed groups → initial access negotiation → pilot access → sustained presence. Skip no steps.",
+        "When access is denied by an armed group, do not attempt to bypass through military escort — this closes the humanitarian space permanently with that group."
+      ]
+    }
+  ]
+}
