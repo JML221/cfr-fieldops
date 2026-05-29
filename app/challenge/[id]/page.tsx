@@ -18,5 +18,11 @@ export default async function ChallengePage({
 
   const lesson = await getLessonContent(id);
 
-  return <ChatPage challenge={challenge} starterPrompts={lesson?.starter_prompts ?? []} />;
+  return (
+    <ChatPage
+      challenge={challenge}
+      starterPrompts={lesson?.starter_prompts ?? []}
+      sources={lesson?.sources ?? []}
+    />
+  );
 }

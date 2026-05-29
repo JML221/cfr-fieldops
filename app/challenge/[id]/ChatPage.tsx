@@ -3,7 +3,7 @@
 import { useEffect, useRef, useState } from 'react';
 import Link from 'next/link';
 import { useChat } from '@/hooks/useChat';
-import type { Challenge } from '@/types';
+import type { Challenge, Source } from '@/types';
 import LoadingDots from '@/components/LoadingDots';
 import PreviousQuestion from '@/components/PreviousQuestion';
 import ResponseBlock from '@/components/ResponseBlock';
@@ -11,12 +11,15 @@ import ResponseBlock from '@/components/ResponseBlock';
 export default function ChatPage({
   challenge,
   starterPrompts,
+  sources,
 }: {
   challenge: Challenge;
   starterPrompts: string[];
+  sources: Source[];
 }) {
   const { messages, isLoading, sendMessage, reset } = useChat(challenge.id);
   const [input, setInput] = useState('');
+  const [showSources, setShowSources] = useState(false);
   const responsesEndRef = useRef<HTMLDivElement>(null);
   const textareaRef = useRef<HTMLTextAreaElement>(null);
 
@@ -114,7 +117,7 @@ export default function ChatPage({
           <div className="mx-5 border-t border-edge flex-shrink-0" />
 
           {/* Starter prompts or question history */}
-          <div className="lg:flex-1 lg:overflow-y-auto px-5 py-4">
+          <div className="lg:flex-1 lg:overflow-y-auto px-5 py-4 flex flex-col gap-4">
             {userMessages.length === 0 ? (
               <div>
                 <p className="text-sm mb-3 font-medium text-muted">
@@ -143,6 +146,51 @@ export default function ChatPage({
                     <PreviousQuestion key={m.id} message={m} onClick={() => setInput(m.content)} />
                   ))}
                 </div>
+              </div>
+            )}
+
+            {/* Sources section */}
+            {sources.length > 0 && (
+              <div className="border-t border-edge pt-4">
+                <button
+                  onClick={() => setShowSources((s) => !s)}
+                  className="flex items-center justify-between w-full text-left group"
+                >
+                  <span className="text-sm font-bold uppercase tracking-widest text-brand">
+                    Sources
+                  </span>
+                  <span className="flex items-center gap-2">
+                    <span
+                      className="text-xs px-2 py-0.5 rounded-full font-medium"
+                      style={{ background: 'var(--amber)', color: '#000' }}
+                    >
+                      {sources.length}
+                    </span>
+                    <span className="text-muted text-sm transition-transform"
+                      style={{ display: 'inline-block', transform: showSources ? 'rotate(180deg)' : 'rotate(0deg)' }}
+                    >
+                      ▾
+                    </span>
+                  </span>
+                </button>
+
+                {showSources && (
+                  <ul className="mt-3 flex flex-col gap-2">
+                    {sources.map((s, i) => (
+                      <li key={i}>
+                        <a
+                          href={s.url}
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          className="text-sm leading-snug hover:underline block"
+                          style={{ color: 'var(--amber)' }}
+                        >
+                          {s.title}
+                        </a>
+                      </li>
+                    ))}
+                  </ul>
+                )}
               </div>
             )}
           </div>
