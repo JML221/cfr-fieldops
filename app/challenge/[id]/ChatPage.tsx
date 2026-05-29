@@ -2,20 +2,19 @@
 
 import { useEffect, useRef, useState } from 'react';
 import Link from 'next/link';
-import ReactMarkdown from 'react-markdown';
-import remarkGfm from 'remark-gfm';
 import { useChat } from '@/hooks/useChat';
-import type { Challenge, Message } from '@/types';
+import type { Challenge } from '@/types';
+import LoadingDots from '@/components/LoadingDots';
+import PreviousQuestion from '@/components/PreviousQuestion';
+import ResponseBlock from '@/components/ResponseBlock';
 
-const STARTER_PROMPTS = [
-  'How do I request access from an armed group in this area?',
-  'What should I know before moving through NPA-controlled territory?',
-  'What are the biggest safety risks for foreign staff here?',
-  'How do I tell the difference between MILF and BIFF areas?',
-  'What does GO / NO-GO look like for operating in Sulu?',
-];
-
-export default function ChatPage({ challenge }: { challenge: Challenge }) {
+export default function ChatPage({
+  challenge,
+  starterPrompts,
+}: {
+  challenge: Challenge;
+  starterPrompts: string[];
+}) {
   const { messages, isLoading, sendMessage, reset } = useChat(challenge.id);
   const [input, setInput] = useState('');
   const responsesEndRef = useRef<HTMLDivElement>(null);
@@ -122,7 +121,7 @@ export default function ChatPage({ challenge }: { challenge: Challenge }) {
                   Try a starting point:
                 </p>
                 <div className="flex flex-col gap-2">
-                  {STARTER_PROMPTS.map((p) => (
+                  {starterPrompts.map((p) => (
                     <button
                       key={p}
                       onClick={() => sendMessage(p)}
@@ -190,84 +189,5 @@ export default function ChatPage({ challenge }: { challenge: Challenge }) {
         </div>
       </div>
     </div>
-  );
-}
-
-function parseSections(content: string): string[] {
-  const lines = content.split('\n');
-  const sections: string[] = [];
-  for (const line of lines) {
-    const match = line.match(/^\s*(\d+)\.\s+(.+)/);
-    if (match) sections.push(match[2].trim());
-  }
-  return sections;
-}
-
-function ResponseBlock({
-  message,
-  questionText,
-  isLatest,
-  onSectionClick,
-}: {
-  message: Message;
-  questionText?: string;
-  isLatest: boolean;
-  onSectionClick?: (section: string) => void;
-}) {
-  const sections = isLatest ? parseSections(message.content) : [];
-
-  return (
-    <div className={`rounded-lg border overflow-hidden bg-surface ${isLatest ? 'border-brand' : 'border-edge opacity-70'}`}>
-      {questionText && (
-        <div className="px-4 py-2 border-b border-edge text-xs text-muted bg-canvas">
-          <span className="text-brand">Q: </span>{questionText}
-        </div>
-      )}
-      <div className="px-4 py-4 prose-field text-sm">
-        <ReactMarkdown remarkPlugins={[remarkGfm]}>
-          {message.content || '…'}
-        </ReactMarkdown>
-      </div>
-
-      {sections.length > 0 && onSectionClick && (
-        <div className="px-4 pb-4 flex flex-wrap gap-2 border-t border-edge pt-3">
-          {sections.map((s, i) => (
-            <button
-              key={i}
-              onClick={() => onSectionClick(s)}
-              className="text-base px-4 py-2 rounded-full border border-brand font-semibold transition-colors hover:bg-brand/10 text-brand bg-transparent"
-            >
-              {s}
-            </button>
-          ))}
-        </div>
-      )}
-    </div>
-  );
-}
-
-function PreviousQuestion({ message, onClick }: { message: Message; onClick: () => void }) {
-  return (
-    <button
-      onClick={onClick}
-      title="Click to re-use this question"
-      className="text-left px-4 py-2.5 rounded-lg border border-edge transition-colors hover:border-brand/40 w-full bg-canvas text-muted text-lg leading-snug"
-    >
-      <span className="line-clamp-2">{message.content}</span>
-    </button>
-  );
-}
-
-function LoadingDots() {
-  return (
-    <span className="flex gap-1 items-center h-5">
-      {[0, 1, 2].map((i) => (
-        <span
-          key={i}
-          className="w-1.5 h-1.5 rounded-full animate-bounce bg-muted"
-          style={{ animationDelay: `${i * 0.15}s` }}
-        />
-      ))}
-    </span>
   );
 }

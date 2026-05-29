@@ -1,6 +1,7 @@
 import { notFound } from 'next/navigation';
 import challenges from '@/data/challenges.json';
 import type { Challenge } from '@/types';
+import { getLessonContent } from '@/lib/lessons';
 import ChatPage from './ChatPage';
 
 export default async function ChallengePage({
@@ -15,5 +16,7 @@ export default async function ChallengePage({
     notFound();
   }
 
-  return <ChatPage challenge={challenge} />;
+  const lesson = await getLessonContent(id);
+
+  return <ChatPage challenge={challenge} starterPrompts={lesson?.starter_prompts ?? []} />;
 }
