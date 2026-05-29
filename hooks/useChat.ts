@@ -10,7 +10,7 @@ export function useChat(challengeId: string) {
   const sendMessage = useCallback(
     async (content: string) => {
       const userMessage: Message = {
-        id: Date.now().toString(),
+        id: crypto.randomUUID(),
         role: 'user',
         content,
       };
@@ -19,7 +19,7 @@ export function useChat(challengeId: string) {
       setMessages(updatedMessages);
       setIsLoading(true);
 
-      const assistantId = (Date.now() + 1).toString();
+      const assistantId = crypto.randomUUID();
       setMessages((prev) => [
         ...prev,
         { id: assistantId, role: 'assistant', content: '' },

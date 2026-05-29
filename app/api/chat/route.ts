@@ -1,40 +1,14 @@
 import Anthropic from '@anthropic-ai/sdk';
 import challenges from '@/data/challenges.json';
-import philippinesLessons from '@/data/lessons/philippines-armed-actors.json';
+import { getLessonContent, formatLessonAsContext } from '@/lib/lessons';
 
 const MODEL_ID = 'claude-haiku-4-5-20251001';
 
-function getLessonsForChallenge(challengeId: string): string {
-  if (challengeId === 'philippines-armed-actors') {
-    const d = philippinesLessons;
-
-    const groupsBlock = d.armed_groups
-      .map(
-        (g) =>
-          `### ${g.name}\n**Type:** ${g.type}\n**Geography:** ${g.geography}\n**Status:** ${g.status}\n**Engagement notes:** ${g.engagement_notes}\n**Risks:** ${g.risks}`
-      )
-      .join('\n\n');
-
-    const lessonsBlock = d.lessons
-      .map(
-        (cat) =>
-          `### ${cat.category}\n${cat.lessons.map((l) => `- ${l}`).join('\n')}`
-      )
-      .join('\n\n');
-
-    const sourcesBlock = d.sources
-      .map((s) => `- [${s.title}](${s.url})`)
-      .join('\n');
-
-    return `## Situation Overview\n${d.situation_overview}\n\n## Armed Groups Reference\n${groupsBlock}\n\n## Lessons Learned (from published literature)\n${lessonsBlock}\n\n## Sources\n${sourcesBlock}`;
-  }
-  return 'No content loaded for this challenge.';
-}
-
-function buildSystemPrompt(challengeId: string): string {
+async function buildSystemPrompt(challengeId: string): Promise<string> {
   const challenge = challenges.find((c) => c.id === challengeId);
   const challengeTitle = challenge?.title ?? challengeId;
-  const content = getLessonsForChallenge(challengeId);
+  const lesson = await getLessonContent(challengeId);
+  const content = lesson ? formatLessonAsContext(lesson) : 'No content loaded for this challenge.';
 
   return `You are a field operations advisor supporting practitioners working in active conflict environments. Your role is practical decision support — not academic analysis.
 
@@ -77,7 +51,7 @@ export async function POST(req: Request) {
   }
 
   const client = new Anthropic({ apiKey });
-  const system = buildSystemPrompt(challengeId ?? 'philippines-armed-actors');
+  const system = await buildSystemPrompt(challengeId ?? 'philippines-armed-actors');
 
   const anthropicMessages: Anthropic.MessageParam[] = messages.map((m) => ({
     role: m.role as 'user' | 'assistant',

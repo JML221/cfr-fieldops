@@ -2,6 +2,13 @@
   "id": "philippines-armed-actors",
   "title": "Armed Actors – Philippines",
   "region": "Southeast Asia / Mindanao",
+  "starter_prompts": [
+    "How do I request access from an armed group in this area?",
+    "What should I know before moving through NPA-controlled territory?",
+    "What are the biggest safety risks for foreign staff here?",
+    "How do I tell the difference between MILF and BIFF areas?",
+    "What does GO / NO-GO look like for operating in Sulu?"
+  ],
   "sources": [
     {
       "title": "CCHN Field Manual on Humanitarian Negotiation (2019)",
