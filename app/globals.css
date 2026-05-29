@@ -1,92 +1,88 @@
 @import url('https://fonts.googleapis.com/css2?family=Nunito:wght@500;600;700;800&display=swap');
 @import "tailwindcss";
 
-:root {
-  --bg: #0f1117;
-  --surface: #1a1d27;
-  --border: #2a2d3a;
-  --amber: #f59e0b;
-  --amber-dim: #92400e;
-  --text: #e2e8f0;
-  --text-muted: #8896a7;
-  --green: #22c55e;
-  --red: #ef4444;
-  --font-base: 1rem;
+@theme {
+  --color-base: #0f1117;
+  --color-surface: #1a1d27;
+  --color-edge: #2a2d3a;
+  --color-accent: #f59e0b;
+  --color-accent-dim: #92400e;
+  --color-muted: #8896a7;
+  --color-active: #22c55e;
+  --color-danger: #ef4444;
 }
 
-* { box-sizing: border-box; margin: 0; padding: 0; }
+@layer base {
+  body {
+    background: #0f1117;
+    color: #e2e8f0;
+    font-family: 'Nunito', ui-sans-serif, system-ui, sans-serif;
+    font-size: 1.25rem;
+    font-weight: 500;
+    line-height: 1.6;
+    -webkit-font-smoothing: antialiased;
+  }
 
-body {
-  background: var(--bg);
-  color: var(--text);
-  font-family: 'Nunito', ui-sans-serif, system-ui, sans-serif;
-  font-size: 1.25rem;
-  font-weight: 500;
-  line-height: 1.6;
-  -webkit-font-smoothing: antialiased;
-}
+  /* Markdown in chat */
+  .prose-field {
+    font-size: 1.25rem;
+    line-height: 1.75;
+    font-weight: 500;
+  }
 
-/* Markdown in chat */
-.prose-field {
-  font-size: 1.25rem;
-  line-height: 1.75;
-  font-weight: 500;
-}
+  .prose-field h1, .prose-field h2, .prose-field h3 {
+    color: #f59e0b;
+    font-weight: 800;
+    margin-bottom: 0.7rem;
+    margin-top: 1.4rem;
+  }
+  .prose-field h1 { font-size: 1.6rem; }
+  .prose-field h2 { font-size: 1.4rem; }
+  .prose-field h3 { font-size: 1.25rem; }
 
-.prose-field h1, .prose-field h2, .prose-field h3 {
-  color: var(--amber);
-  font-weight: 800;
-  margin-bottom: 0.7rem;
-  margin-top: 1.4rem;
-}
-.prose-field h1 { font-size: 1.6rem; }
-.prose-field h2 { font-size: 1.4rem; }
-.prose-field h3 { font-size: 1.25rem; }
+  .prose-field p { margin-bottom: 1rem; line-height: 1.8; }
 
-.prose-field p { margin-bottom: 1rem; line-height: 1.8; }
+  .prose-field ul {
+    list-style-type: disc;
+    padding-left: 1.6rem;
+    margin-bottom: 1rem;
+  }
+  .prose-field ol {
+    list-style-type: decimal;
+    padding-left: 1.6rem;
+    margin-bottom: 1rem;
+  }
+  .prose-field li {
+    margin-bottom: 0.6rem;
+    line-height: 1.75;
+    font-size: 1.25rem;
+  }
 
-.prose-field ul {
-  list-style-type: disc;
-  padding-left: 1.6rem;
-  margin-bottom: 1rem;
-}
-.prose-field ol {
-  list-style-type: decimal;
-  padding-left: 1.6rem;
-  margin-bottom: 1rem;
-}
-.prose-field li {
-  margin-bottom: 0.6rem;
-  line-height: 1.75;
-  font-size: 1.25rem;
-}
+  .prose-field li input[type="checkbox"] {
+    margin-right: 0.6rem;
+    accent-color: #f59e0b;
+    width: 1.2rem;
+    height: 1.2rem;
+  }
 
-/* Checklist items */
-.prose-field li input[type="checkbox"] {
-  margin-right: 0.6rem;
-  accent-color: var(--amber);
-  width: 1.2rem;
-  height: 1.2rem;
-}
+  .prose-field strong { color: #f1f5f9; font-weight: 700; }
+  .prose-field em { color: #94a3b8; }
+  .prose-field code {
+    background: #1e2130;
+    padding: 0.2rem 0.5rem;
+    border-radius: 4px;
+    font-size: 0.9em;
+  }
+  .prose-field a { color: #f59e0b; text-decoration: underline; }
 
-.prose-field strong { color: #f1f5f9; font-weight: 700; }
-.prose-field em { color: #94a3b8; }
-.prose-field code {
-  background: #1e2130;
-  padding: 0.2rem 0.5rem;
-  border-radius: 4px;
-  font-size: 0.9em;
-}
-.prose-field a { color: var(--amber); text-decoration: underline; }
+  .prose-field blockquote {
+    border-left: 4px solid #f59e0b;
+    padding-left: 1.2rem;
+    color: #94a3b8;
+    margin: 1rem 0;
+  }
 
-.prose-field blockquote {
-  border-left: 4px solid var(--amber);
-  padding-left: 1.2rem;
-  color: #94a3b8;
-  margin: 1rem 0;
+  ::-webkit-scrollbar { width: 6px; }
+  ::-webkit-scrollbar-track { background: transparent; }
+  ::-webkit-scrollbar-thumb { background: #2a2d3a; border-radius: 3px; }
 }
-
-/* Scrollbar */
-::-webkit-scrollbar { width: 6px; }
-::-webkit-scrollbar-track { background: transparent; }
-::-webkit-scrollbar-thumb { background: var(--border); border-radius: 3px; }
