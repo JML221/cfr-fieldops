@@ -21,11 +21,23 @@ AI-powered decision-support tool for humanitarian field operators working in act
 npm install
 ```
 
-Create a `.env.local` file:
+Create a `.env.local` file with the following required variables:
+
+| Variable | Required | Description |
+|---|---|---|
+| `ANTHROPIC_API_KEY` | Yes | Anthropic API key — get one at console.anthropic.com |
+| `SITE_PASSWORD` | Yes | Password users enter at the `/login` gate |
+| `SITE_AUTH_TOKEN` | Yes | Secret stored in the auth cookie after login — use a long random string, keep it private |
+
+Example:
 
 ```
-ANTHROPIC_API_KEY=your_key_here
+ANTHROPIC_API_KEY=sk-ant-...
+SITE_PASSWORD=your_password_here
+SITE_AUTH_TOKEN=some_long_random_string_change_this
 ```
+
+The app will not start correctly if `ANTHROPIC_API_KEY` is missing, and the password gate will block all access if `SITE_PASSWORD` or `SITE_AUTH_TOKEN` are missing. Change all three values before deploying.
 
 ```bash
 npm run dev   # http://localhost:3001
@@ -34,10 +46,13 @@ npm run dev   # http://localhost:3001
 ## Project structure
 
 ```
+middleware.ts             # Password gate — redirects unauthenticated requests to /login
 app/
   layout.tsx              # Root layout, fonts, metadata
   page.tsx                # Home page — challenge list
   globals.css             # Tailwind v4 theme tokens and prose styles
+  login/page.tsx          # Password login page
+  api/auth/route.ts       # Auth endpoint — verifies password, sets cookie
   api/chat/route.ts       # Streaming chat endpoint
   challenge/[id]/
     page.tsx              # Server component — challenge lookup
