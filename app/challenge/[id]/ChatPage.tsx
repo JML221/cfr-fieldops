@@ -46,7 +46,7 @@ export default function ChatPage({ challenge }: { challenge: Challenge }) {
   const assistantMessages = messages.filter((m) => m.role === 'assistant');
 
   return (
-    <div className="flex flex-col min-h-screen lg:h-screen bg-base">
+    <div className="flex flex-col min-h-screen lg:h-screen bg-canvas">
 
       {/* Header */}
       <header className="flex-shrink-0 border-b border-edge px-4 py-3 flex items-center gap-2 bg-surface">
@@ -64,7 +64,7 @@ export default function ChatPage({ challenge }: { challenge: Challenge }) {
         </div>
         <button
           onClick={reset}
-          className="text-sm sm:text-base px-3 sm:px-5 py-1.5 sm:py-2.5 rounded-lg font-bold transition-all hover:brightness-110 active:scale-95 bg-accent text-black whitespace-nowrap flex-shrink-0"
+          className="text-sm sm:text-base px-3 sm:px-5 py-1.5 sm:py-2.5 rounded-lg font-bold transition-all hover:brightness-110 active:scale-95 bg-brand text-black whitespace-nowrap flex-shrink-0"
         >
           + New Session
         </button>
@@ -76,7 +76,7 @@ export default function ChatPage({ challenge }: { challenge: Challenge }) {
         {/* LEFT — Question panel */}
         <div className="flex flex-col lg:w-2/5 border-b lg:border-b-0 lg:border-r border-edge bg-surface">
           <div className="px-5 pt-5 pb-2 flex-shrink-0">
-            <p className="text-sm font-bold uppercase tracking-widest text-accent">
+            <p className="text-sm font-bold uppercase tracking-widest text-brand">
               Your Question
             </p>
           </div>
@@ -89,7 +89,7 @@ export default function ChatPage({ challenge }: { challenge: Challenge }) {
               onChange={(e) => setInput(e.target.value)}
               onKeyDown={handleKey}
               placeholder="Describe your situation or ask a question…"
-              className="w-full resize-none rounded-lg border border-edge outline-none p-4 bg-base text-slate-200 text-xl leading-relaxed"
+              className="w-full resize-none rounded-lg border border-edge outline-none p-4 bg-canvas text-slate-200 text-xl leading-relaxed"
               style={{ minHeight: '130px', maxHeight: '240px' }}
               onInput={(e) => {
                 const t = e.currentTarget;
@@ -104,7 +104,7 @@ export default function ChatPage({ challenge }: { challenge: Challenge }) {
             <button
               onClick={handleSend}
               disabled={isLoading || !input.trim()}
-              className="px-5 py-2.5 rounded-lg font-semibold transition-all disabled:opacity-40 flex-1 hover:brightness-110 active:scale-95 bg-accent text-black"
+              className="px-5 py-2.5 rounded-lg font-semibold transition-all disabled:opacity-40 flex-1 hover:brightness-110 active:scale-95 bg-brand text-black"
             >
               {isLoading ? 'Thinking…' : 'Send'}
             </button>
@@ -127,7 +127,7 @@ export default function ChatPage({ challenge }: { challenge: Challenge }) {
                       key={p}
                       onClick={() => sendMessage(p)}
                       disabled={isLoading}
-                      className="text-left px-4 py-3 rounded-lg border border-edge transition-colors hover:border-accent/40 disabled:opacity-50 bg-base text-slate-200 text-xl leading-snug"
+                      className="text-left px-4 py-3 rounded-lg border border-edge transition-colors hover:border-brand/40 disabled:opacity-50 bg-canvas text-slate-200 text-xl leading-snug"
                     >
                       {p}
                     </button>
@@ -152,7 +152,7 @@ export default function ChatPage({ challenge }: { challenge: Challenge }) {
         {/* RIGHT — Response panel */}
         <div className="flex flex-col flex-1 lg:overflow-hidden">
           <div className="px-5 pt-5 pb-2 flex-shrink-0">
-            <p className="text-sm font-bold uppercase tracking-widest text-accent">
+            <p className="text-sm font-bold uppercase tracking-widest text-brand">
               Advisor Response
             </p>
           </div>
@@ -217,10 +217,10 @@ function ResponseBlock({
   const sections = isLatest ? parseSections(message.content) : [];
 
   return (
-    <div className={`rounded-lg border overflow-hidden bg-surface ${isLatest ? 'border-accent' : 'border-edge opacity-70'}`}>
+    <div className={`rounded-lg border overflow-hidden bg-surface ${isLatest ? 'border-brand' : 'border-edge opacity-70'}`}>
       {questionText && (
-        <div className="px-4 py-2 border-b border-edge text-xs text-muted bg-base">
-          <span className="text-accent">Q: </span>{questionText}
+        <div className="px-4 py-2 border-b border-edge text-xs text-muted bg-canvas">
+          <span className="text-brand">Q: </span>{questionText}
         </div>
       )}
       <div className="px-4 py-4 prose-field text-sm">
@@ -235,7 +235,7 @@ function ResponseBlock({
             <button
               key={i}
               onClick={() => onSectionClick(s)}
-              className="text-base px-4 py-2 rounded-full border border-accent font-semibold transition-colors hover:bg-accent/10 text-accent bg-transparent"
+              className="text-base px-4 py-2 rounded-full border border-brand font-semibold transition-colors hover:bg-brand/10 text-brand bg-transparent"
             >
               {s}
             </button>
@@ -251,7 +251,7 @@ function PreviousQuestion({ message, onClick }: { message: Message; onClick: () 
     <button
       onClick={onClick}
       title="Click to re-use this question"
-      className="text-left px-4 py-2.5 rounded-lg border border-edge transition-colors hover:border-accent/40 w-full bg-base text-muted text-lg leading-snug"
+      className="text-left px-4 py-2.5 rounded-lg border border-edge transition-colors hover:border-brand/40 w-full bg-canvas text-muted text-lg leading-snug"
     >
       <span className="line-clamp-2">{message.content}</span>
     </button>

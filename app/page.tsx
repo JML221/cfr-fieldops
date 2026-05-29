@@ -6,11 +6,11 @@ export default function Home() {
   const typedChallenges = challenges as Challenge[];
 
   return (
-    <div className="min-h-screen flex flex-col bg-base">
+    <div className="min-h-screen flex flex-col bg-canvas">
       <header className="border-b border-edge px-6 py-4 flex items-center gap-3 bg-surface">
-        <div className="w-2 h-6 rounded-sm bg-accent" />
+        <div className="w-2 h-6 rounded-sm bg-brand" />
         <div>
-          <div className="text-xs font-semibold tracking-widest uppercase text-accent">
+          <div className="text-xs font-semibold tracking-widest uppercase text-brand">
             CFR Field Operations
           </div>
           <div className="text-lg font-bold text-white leading-tight">
@@ -76,7 +76,7 @@ function ChallengeCard({ challenge }: { challenge: Challenge }) {
       </div>
 
       {isActive && (
-        <div className="flex-shrink-0 mt-1 text-accent">→</div>
+        <div className="flex-shrink-0 mt-1 text-brand">→</div>
       )}
     </div>
   );
