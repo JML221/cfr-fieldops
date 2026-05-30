@@ -37,7 +37,11 @@ Every push to `main` triggers an automatic redeploy. No manual action needed.
 
 ## Custom domain (optional)
 
-1. In the Netlify dashboard go to **Domain management → Add a domain**
-2. Enter your subdomain (e.g. `fieldops.yourorg.org`)
-3. Add a `CNAME` record at your DNS provider pointing to the Netlify URL shown in the dashboard
-4. Netlify provisions an SSL certificate automatically within a few minutes
+The domain is managed in **Squarespace**.
+
+1. In the Netlify dashboard go to **Domain management → Add a domain** and enter your subdomain (e.g. `fieldops.yourorg.org`) — Netlify will show you a CNAME target URL
+2. Log into Squarespace → **Domains → your domain → DNS Settings**
+3. Add a `CNAME` record:
+   - **Host:** your subdomain prefix (e.g. `fieldops`)
+   - **Value:** the Netlify CNAME target from step 1 (e.g. `yoursite.netlify.app`)
+4. Save — Netlify will detect the record and provision an SSL certificate automatically within a few minutes
