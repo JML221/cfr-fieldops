@@ -32,7 +32,7 @@ export default function ResponseBlock({
           <span className="text-brand">Q: </span>{questionText}
         </div>
       )}
-      <div className="px-4 py-4 prose-field text-sm">
+      <div className="px-4 py-4 prose-field">
         <ReactMarkdown remarkPlugins={[remarkGfm]}>
           {message.content || '…'}
         </ReactMarkdown>
