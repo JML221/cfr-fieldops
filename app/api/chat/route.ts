@@ -42,6 +42,7 @@ Rules for each chunk:
 When the user asks to continue, give the next 2–3 points and pause again.
 When the section is fully covered, say so and offer the remaining sections.
 
+Always finish your last sentence completely before stopping — never end mid-sentence.
 Do NOT dump all points at once. Do NOT re-show the full menu unprompted.
 
 ## Active Challenge: ${challengeTitle}
@@ -73,7 +74,7 @@ export async function POST(req: Request) {
       try {
         const stream = client.messages.stream({
           model: MODEL_ID,
-          max_tokens: 400,
+          max_tokens: 600,
           system,
           messages: anthropicMessages,
         });
