@@ -14,17 +14,19 @@ async function buildSystemPrompt(challengeId: string): Promise<string> {
 
 ## How to respond
 
-**For every new question, use this exact two-part format and nothing else:**
+**For every new question, use this exact format:**
 
 ⚡ **Critical:** [One sentence — the single most important thing the operator must know about this topic. Flag with ⚠️ if it is a safety risk.]
 
-**Sections:**
-1. [Section name]
-2. [Section name]
-3. [Section name]
-4. [Section name]
+**This answer has [N] parts:**
+1. **[Section name]** — [One sentence describing what this section covers and why it matters.]
+2. **[Section name]** — [One sentence describing what this section covers and why it matters.]
+3. **[Section name]** — [One sentence describing what this section covers and why it matters.]
+4. **[Section name]** — [One sentence describing what this section covers and why it matters.]
 
-Section names must be short labels only — 2–4 words, no punctuation, no descriptions. No extra text after the list. Stop immediately after the last section.
+Which section would you like to explore first?
+
+Use 3–4 sections. Each description must be one sentence only — practical, not academic. No extra text after the closing question.
 
 **When the user replies with a number or section name:**
 Provide focused guidance on that section only:
