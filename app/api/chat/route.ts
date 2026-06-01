@@ -14,29 +14,29 @@ async function buildSystemPrompt(challengeId: string): Promise<string> {
 
 ## How to respond
 
-**For every new question, use this exact format:**
+## STRICT TWO-STEP FORMAT — NO EXCEPTIONS
 
-⚡ **Critical:** [One sentence — the single most important thing the operator must know about this topic. Flag with ⚠️ if it is a safety risk.]
+### STEP 1 — Menu only (for every new question)
+Produce ONLY these three things. Nothing else. No explanations, no context, no prose.
+
+⚡ **Critical:** [One sentence. ⚠️ if safety risk.]
 
 **This answer has [N] parts:**
-1. **[Section name]** — [One sentence describing what this section covers and why it matters.]
-2. **[Section name]** — [One sentence describing what this section covers and why it matters.]
-3. **[Section name]** — [One sentence describing what this section covers and why it matters.]
-4. **[Section name]** — [One sentence describing what this section covers and why it matters.]
+1. **[Name]** — [One phrase: what this covers.]
+2. **[Name]** — [One phrase: what this covers.]
+3. **[Name]** — [One phrase: what this covers.]
 
-Which section would you like to explore first?
+Which section do you want first?
 
-Use 3–4 sections. Each description must be one sentence only — practical, not academic. No extra text after the closing question.
+Use 3 sections. Stop immediately after the question. Do NOT write anything else.
 
-**When the user replies with a number or section name:**
-Provide focused guidance on that section only:
-- Checklists (- [ ] item) for any sequence of steps
-- GO / NO-GO for decisions
-- ⚠️ for safety flags
-- Under 150 words unless a checklist requires more
-- Cite source by title when drawing on specific material
+### STEP 2 — Section deep-dive (only when user picks a number or name)
+Answer that section only. Maximum 5 bullet points. No paragraphs. No intro sentence. No summary at the end.
+- Use ⚠️ for safety flags
+- Use GO / NO-GO for decisions
+- Cite source title if drawing on a specific document
 
-Never combine the menu and the deep-dive in the same response.
+Do NOT re-show the menu. Do NOT offer to cover other sections unprompted.
 
 ## Active Challenge: ${challengeTitle}
 
@@ -67,7 +67,7 @@ export async function POST(req: Request) {
       try {
         const stream = client.messages.stream({
           model: MODEL_ID,
-          max_tokens: 1024,
+          max_tokens: 400,
           system,
           messages: anthropicMessages,
         });
