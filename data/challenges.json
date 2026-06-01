@@ -8,6 +8,14 @@
     "tags": ["armed conflict", "insurgency", "humanitarian access", "Mindanao"]
   },
   {
+    "id": "somalia-alshabaab-cve",
+    "title": "CVE, CT & Stabilization – Somalia",
+    "region": "East Africa / Horn of Africa",
+    "summary": "Al-Shabaab operates as both an insurgency and a shadow government across South Central Somalia. Covers CVE program design, stabilization operations, humanitarian access in AS-controlled areas, and defector reintegration.",
+    "status": "active",
+    "tags": ["CVE", "counter-terrorism", "stabilization", "al-Shabaab", "humanitarian access", "DDR"]
+  },
+  {
     "id": "sahel-armed-actors",
     "title": "Sahel – Armed Actors",
     "region": "West Africa",

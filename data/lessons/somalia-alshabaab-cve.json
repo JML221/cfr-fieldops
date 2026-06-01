@@ -1,0 +1,170 @@
+{
+  "id": "somalia-alshabaab-cve",
+  "title": "CVE, CT & Stabilization – Somalia",
+  "region": "East Africa / Horn of Africa",
+  "starter_prompts": [
+    "What are the CVE entry points in al-Shabaab-controlled or -influenced areas?",
+    "How do I engage communities in recently liberated territories?",
+    "What are the risks of being associated with military actors in stabilization work?",
+    "How does al-Shabaab's taxation system affect our operations?",
+    "What does a defector reintegration pathway look like in practice?"
+  ],
+  "sources": [
+    {
+      "title": "Africa Center for Strategic Studies – Practical Lessons to Improve Stabilization Operations in Somalia",
+      "url": "https://africacenter.org/spotlight/lessons-stabilization-somalia/"
+    },
+    {
+      "title": "Africa Center for Strategic Studies – AMISOM's Hard-Earned Lessons in Somalia",
+      "url": "https://africacenter.org/spotlight/amisom-hard-earned-lessons-somalia/"
+    },
+    {
+      "title": "Clingendael / NOREF – Red Lines and al-Shabaab: Negotiating Humanitarian Access in Somalia",
+      "url": "https://www.clingendael.org/sites/default/files/pdfs/Belliveu_NOREF_Clingendael_Negotiating%20with%20Al%20Shabaab_Mar%202015.pdf"
+    },
+    {
+      "title": "ODI – A Deadly Dilemma: How Al-Shabaab Came to Dictate the Terms of Humanitarian Aid in Somalia",
+      "url": "https://odi.org/en/insights/a-deadly-dilemma-how-al-shabaab-came-to-dictate-the-terms-of-humanitarian-aid-in-somalia/"
+    },
+    {
+      "title": "GSDRC – Talking to the Other Side: Humanitarian Negotiations with Al-Shabaab in Somalia",
+      "url": "https://gsdrc.org/document-library/talking-to-the-other-side-humanitarian-negotiations-with-al-shabaab-in-somalia/"
+    },
+    {
+      "title": "OsloMet – Countering Violent Extremism in Somalia and Kenya",
+      "url": "https://www.cve-kenya.org/media/library/oslomet.pdf"
+    },
+    {
+      "title": "Georgetown Journal of International Affairs – Countering Violent Extremism in the Horn of Africa",
+      "url": "https://gjia.georgetown.edu/2015/10/10/countering-violent-extremism-in-the-horn-of-africa/"
+    },
+    {
+      "title": "RUSI – Disengaged Combatants in Somalia",
+      "url": "https://static.rusi.org/disengaged-combatants-in-somalia.pdf"
+    },
+    {
+      "title": "Vanda Felbab-Brown / UNU – Reintegration in Somalia",
+      "url": "https://i.unu.edu/media/cpr.unu.edu/attachment/3129/4-LoP-Somalia-final.pdf"
+    },
+    {
+      "title": "Combating Terrorism Center at West Point – Somalia's Stalled Offensive Against al-Shabaab",
+      "url": "https://ctc.westpoint.edu/somalias-stalled-offensive-against-al-shabaab-taking-stock-of-obstacles/"
+    },
+    {
+      "title": "Combating Terrorism Center at West Point – Somalia at a Crossroads: Resurgent Insurgents and the Future of AUSSOM",
+      "url": "https://ctc.westpoint.edu/somalia-at-a-crossroads-resurgent-insurgents-fragmented-politics-and-the-uncertain-future-of-aussom/"
+    },
+    {
+      "title": "The New Humanitarian – Al-Shabaab's Shadow State: Why Somalia's Militants Are Winning Legitimacy",
+      "url": "https://www.thenewhumanitarian.org/analysis/2025/09/25/al-shabab-why-somalia-militants-winning-legitimacy"
+    },
+    {
+      "title": "UN Somalia (UNSOM) – Prevention and Countering of Violent Extremism",
+      "url": "https://unsom.unmissions.org/en/prevention-and-countering-violent-extremism"
+    },
+    {
+      "title": "International Peace Institute – The UN Support Office Model: Lessons from Somalia (2024)",
+      "url": "https://www.ipinst.org/wp-content/uploads/2024/09/2409_The-UN-Support-Office-Model-Somaliaweb.pdf"
+    }
+  ],
+  "situation_overview": "Al-Shabaab is a designated terrorist organization that controls significant territory across South Central Somalia and operates as a shadow government — collecting taxes, adjudicating disputes, delivering services, and enforcing compliance — often more effectively than the Federal Government of Somalia (FGS). The Somali National Army (SNA) and African Union Transition Mission in Somalia (AUSSOM, formerly AMISOM) have conducted clear-hold-build operations, clearing over 200 settlements by April 2023, but the 'hold' and 'build' phases have consistently stalled due to poor civil-military coordination and FGS governance gaps. Al-Shabaab has regrouped and counterattacked in multiple areas. Field operators work in a complex environment where al-Shabaab controls access, taxes humanitarian operations, and leverages counter-terrorism financing laws to suppress humanitarian engagement. CVE and stabilization work must be differentiated by territorial control zone: al-Shabaab permanent control, al-Shabaab semi-permanent presence, contested, and FGS-controlled.",
+  "armed_groups": [
+    {
+      "name": "Al-Shabaab (Harakat al-Shabaab al-Mujahideen)",
+      "type": "Islamist insurgency / shadow government",
+      "geography": "Dominant in South Central Somalia (Jubaland, South West State, Bay, Bakool, Hiraan). Active in all regions. Periodic attacks in Mogadishu and Puntland.",
+      "status": "Designated terrorist organization by US, UN, EU, AU. Controls or contests approximately 20–30% of Somali territory. Has resisted SNA/AUSSOM offensive and reconstituted in cleared areas.",
+      "engagement_notes": "Al-Shabaab operates a Humanitarian Coordination Office (HCO) in areas under its control. The HCO monitors, regulates, registers, and taxes NGOs. Organizations that maintain structured dialogue at all levels — from senior leadership shura to local commanders — have the best track record of sustained access. Single-level engagement is insufficient. Counter-terrorism financing laws (US, EU) create serious legal risk for direct financial transactions; legal counsel should be engaged before operations in AS-controlled areas.",
+      "risks": "Al-Shabaab has expelled numerous NGOs, including major UN agencies during the 2011 famine. Expulsion is typically triggered by: perceived government/military affiliation, public criticism, failure to pay 'registration fees', or operating without HCO clearance. Staff detention and targeted killings of perceived informants have occurred. Do not underestimate al-Shabaab's intelligence capacity — they often know staff identities and affiliations."
+    },
+    {
+      "name": "Somali National Army (SNA)",
+      "type": "National armed forces",
+      "geography": "Nationwide, primary operations in South Central Somalia",
+      "status": "Primary CT/stabilization partner. Significant capacity gaps in logistics, intelligence, and hold-phase operations. Clan composition influences unit loyalty and operational behavior by region.",
+      "engagement_notes": "SNA association creates neutrality risk for humanitarian and CVE actors. Clan affiliation of SNA units varies by region and affects community perception of operations. The SNA has improved through AMISOM/AUSSOM mentorship but remains dependent on external support for sustained operations.",
+      "risks": "Being seen as embedded with or funded by SNA operations will compromise access in al-Shabaab areas and reduce community trust in CVE programs. Civil-military coordination is essential but must be structured to maintain visible separation."
+    },
+    {
+      "name": "AUSSOM / AMISOM (African Union Transition Mission in Somalia)",
+      "type": "Multilateral peacekeeping / counterinsurgency force",
+      "geography": "Major bases: Mogadishu, Kismaayo, Baidoa, Beledweyne. Sector-based deployment.",
+      "status": "Transitioning from AMISOM to AUSSOM with reduced troop ceiling. Contributing countries: Uganda, Burundi, Kenya, Ethiopia, Djibouti. Scheduled drawdown increases security responsibility on SNA.",
+      "engagement_notes": "AUSSOM has progressively adopted COIN tactics — more community engagement, targeted operations, reduced collateral damage — but civil-military coordination with humanitarian actors remains weak. Coordinate through UN CMCoord mechanisms; avoid direct operational embedding.",
+      "risks": "AUSSOM drawdown is increasing security vacuums in formerly held areas. Anticipate deterioration in areas transitioning to SNA-only coverage."
+    },
+    {
+      "name": "Clan Militias / Local Armed Groups",
+      "type": "Community-based armed actors",
+      "geography": "Distributed nationwide — Hawiye, Darod, Dir, Rahanweyn, and subclan variants",
+      "status": "Variable alignment — some allied with FGS, some with al-Shabaab, some independent. Critical to both al-Shabaab recruitment/support and community CVE efforts.",
+      "engagement_notes": "Clan structures are the primary social organizing unit in Somalia. No CVE, reintegration, or stabilization program succeeds without clan elder buy-in. Identify the relevant clan structure before any community engagement. Elder networks can provide early warning and access assurance that formal security actors cannot.",
+      "risks": "Engaging one clan's militia or elder network without equivalent engagement with others in contested areas can be perceived as partisan and create security risk."
+    }
+  ],
+  "lessons": [
+    {
+      "category": "CVE Program Design",
+      "lessons": [
+        "CVE interventions must be geographically differentiated: programs appropriate for FGS-controlled areas are counterproductive in al-Shabaab permanent-control areas. Map territorial control before designing any CVE activity.",
+        "Target vulnerable micro-groups, not whole communities. Drivers of radicalization — unemployment, clan grievance, ideology, coercion, family ties — vary significantly. Catchall community programs are ineffective and can signal weakness.",
+        "Government legitimacy is the central CVE variable. People comply with al-Shabaab primarily due to distrust of the FGS, not ideology. CVE programs that do not address governance gaps treat symptoms, not causes.",
+        "Al-Shabaab's comparative advantage is service delivery: courts, taxation, dispute resolution, and enforcement. CVE interventions that cannot offer credible alternatives to these services have limited impact.",
+        "Somalia's National Strategy on P/CVE (2016) identifies seven pillars: dialogue and conflict prevention; governance and rule of law; community engagement; youth empowerment; gender equality; education and employment; and strategic communications. Use this as a coordination framework with government counterparts.",
+        "Women are critical but underutilized CVE actors. Female community members have insight into family-level radicalization pathways and early warning signals that male-dominated programming misses entirely."
+      ]
+    },
+    {
+      "category": "Stabilization (Clear-Hold-Build)",
+      "lessons": [
+        "The 'clear' phase has repeatedly succeeded; the 'hold' and 'build' phases have consistently failed. The core gap is civil-military coordination between SNA/AUSSOM and civilian stabilization actors in the post-clearance window.",
+        "Al-Shabaab consistently reconstitutes in areas where the hold phase is weak. Field operators should treat any 'cleared' area as contested until civilian governance is demonstrably functional.",
+        "Pre-operation coordination between military and civilian authorities — agreeing on sequencing, governance handover, and community engagement plans before clearance operations — is the single most important structural improvement available.",
+        "Interclan reconciliation dialogues in stabilized areas have shown measurable impact when conducted before civil infrastructure repair, not after. Sequencing matters: political reconciliation first, physical reconstruction second.",
+        "International stabilization assistance has been most effective when it establishes nascent governance structures and facilitates interclan dialogue simultaneously, not sequentially.",
+        "The SNA's clan composition in a given operational area directly affects the community's perception of post-clearance security. Mismatched clan composition of holding forces is a known driver of al-Shabaab return."
+      ]
+    },
+    {
+      "category": "Humanitarian Access in AS-Controlled Areas",
+      "lessons": [
+        "Organizations that succeeded in maintaining access in al-Shabaab areas engaged comprehensively at all levels — senior shura leadership, mid-level commanders, and local fighters. Engagement at only one level is insufficient and often counterproductive.",
+        "Al-Shabaab's Humanitarian Coordination Office (HCO) must be engaged as a formal access negotiation counterpart in areas under AS control. Attempting to operate without HCO registration greatly increases expulsion risk.",
+        "Counter-terrorism financing laws (US, EU, UN) technically prohibit transactions with al-Shabaab, including 'registration fees' or 'taxation.' This creates an irresolvable legal dilemma for many international NGOs. Resolve your organization's legal position — in writing, with legal counsel — before operations. Do not leave field staff to navigate this without guidance.",
+        "The culture of silence around AS engagement (driven by CT law risk) has historically reduced collective learning. Where possible, coordinate discreetly with peer agencies on access approaches to avoid reinventing access agreements.",
+        "Al-Shabaab has expelled organizations that publicly criticized them, reported on abuses, or were perceived as information-gathering for military actors. Maintain strict operational security on access negotiations.",
+        "Principled humanitarian engagement (Humanity, Neutrality, Impartiality, Independence) is a recognized framework that al-Shabaab's HCO has shown some respect for — invoking these principles explicitly in access negotiations has documented value."
+      ]
+    },
+    {
+      "category": "Defector Reintegration (DDR/CVE)",
+      "lessons": [
+        "The FGS Serendi rehabilitation program provides the primary formal pathway: low-risk defectors go to regional transition centers for counseling, skills training, and micro-enterprise grants (~$1,500). Know this pathway and be able to refer to it.",
+        "Community acceptance is the single biggest bottleneck for successful reintegration. Ex-combatants who return to communities without prior reconciliation work face rejection, which significantly increases re-recruitment risk.",
+        "Clan elder involvement in reintegration is not optional — it is the mechanism. Reintegration decisions are effectively made at the clan level. External programs that bypass elders have poor outcomes.",
+        "Gender gaps are significant: the FGS DDR program has focused almost entirely on male defectors. Women who leave al-Shabaab face compounded stigma (combatant and 'dishonored') and require separate, gender-sensitive pathways.",
+        "The gap between ex-combatant expectations and community member perceptions is a consistent failure point. Both sides require preparation before reintegration — not just the returnee.",
+        "Severe unemployment, unstable security, and financial difficulty are the primary drivers of re-recruitment. Micro-enterprise grants address only one of these. Programs without a security stabilization component in the operating area have high recidivism rates."
+      ]
+    },
+    {
+      "category": "Field Safety and Organizational Risk",
+      "lessons": [
+        "Al-Shabaab has sophisticated intelligence capacity — do not assume operational anonymity. Staff identities, organizational affiliations, and funding sources are often known before field teams arrive.",
+        "Association with US, EU, or other CT-funding sources is a known access risk in AS-controlled areas. Funding transparency requirements conflict directly with operational security needs — address this in your organizational security policy before deployment.",
+        "Establish a clear organizational policy on 'taxation' by armed groups before deployment. Field staff must know the answer to 'what do we do if AS demands payment' before it happens, not during.",
+        "Mogadishu-based security assumptions do not transfer to South Central Somalia field operations. Conduct zone-specific threat assessments for each operating area.",
+        "The AUSSOM drawdown is creating new security vacuums. Areas previously covered by AU forces are increasingly SNA-only, with variable coverage. Reassess access and movement protocols in transitioning areas regularly."
+      ]
+    },
+    {
+      "category": "Engagement with Government and Coordination Architecture",
+      "lessons": [
+        "Federal Member States (Jubaland, South West State, Hirshabelle, Galmudug, SSC-Khaatumo) have independent security and political relationships with al-Shabaab. Federal government coordination does not automatically transfer to member state operations.",
+        "NISA (National Intelligence and Security Agency) is the primary CT coordination counterpart for information sharing. NISA relationships are valuable but carry the same neutrality risk as SNA association.",
+        "The UN Integrated Task Force (ITF) coordinates UN political, security, and humanitarian actors in Somalia. Participate in ITF and CMCoord mechanisms to avoid duplicating access negotiations and to benefit from collective learning.",
+        "Track OCHA Somalia's quarterly Humanitarian Access Overview — it provides the most current public assessment of access constraints by zone and is the reference document for access planning."
+      ]
+    }
+  ]
+}
