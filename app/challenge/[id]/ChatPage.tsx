@@ -19,7 +19,7 @@ export default function ChatPage({
 }) {
   const { messages, isLoading, sendMessage, reset } = useChat(challenge.id);
   const [input, setInput] = useState('');
-  const [showSources, setShowSources] = useState(false);
+  const [showSources, setShowSources] = useState(true);
   const responsesEndRef = useRef<HTMLDivElement>(null);
   const textareaRef = useRef<HTMLTextAreaElement>(null);
 
