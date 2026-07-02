@@ -41,7 +41,7 @@ function LoginForm() {
           <div className="w-2 h-6 rounded-sm bg-brand" />
           <div>
             <div className="text-xs font-semibold tracking-widest uppercase text-brand">
-              CFR Field Operations
+              Field Operations
             </div>
             <div className="text-lg font-bold text-white leading-tight">
               Field Advisor

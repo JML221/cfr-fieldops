@@ -16,6 +16,14 @@
     "tags": ["CVE", "counter-terrorism", "stabilization", "al-Shabaab", "humanitarian access", "DDR"]
   },
   {
+    "id": "baltics-russia-hybrid",
+    "title": "Countering Russian Aggression – Baltics",
+    "region": "Northern Europe / Baltic States",
+    "summary": "Russia prosecutes hybrid warfare against Estonia, Latvia, and Lithuania through disinformation, cyber attacks, minority community manipulation, infrastructure sabotage, and gray-zone military provocations, backed by conventional military threat. Covers hybrid threat recognition, counter-disinformation, civil resilience, minority engagement, NATO deterrence posture, and field operator security.",
+    "status": "active",
+    "tags": ["hybrid warfare", "disinformation", "NATO", "civil resilience", "Russia", "information operations", "cyber"]
+  },
+  {
     "id": "sahel-armed-actors",
     "title": "Sahel – Armed Actors",
     "region": "West Africa",
