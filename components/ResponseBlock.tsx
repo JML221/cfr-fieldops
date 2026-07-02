@@ -1,6 +1,6 @@
 import ReactMarkdown from 'react-markdown';
 import remarkGfm from 'remark-gfm';
-import type { Message } from '@/types';
+import type { Message, Source } from '@/types';
 
 function parseSections(content: string): string[] {
   const lines = content.split('\n');
@@ -12,18 +12,32 @@ function parseSections(content: string): string[] {
   return sections;
 }
 
+function extractCitations(content: string): { body: string; indices: number[] } {
+  const idx = content.lastIndexOf('\n📚');
+  if (idx === -1) return { body: content, indices: [] };
+  const citeLine = content.slice(idx);
+  const nums = [...citeLine.matchAll(/\[(\d+)\]/g)].map((m) => parseInt(m[1]) - 1);
+  return { body: content.slice(0, idx).trim(), indices: nums };
+}
+
 export default function ResponseBlock({
   message,
   questionText,
   isLatest,
+  sources,
   onSectionClick,
 }: {
   message: Message;
   questionText?: string;
   isLatest: boolean;
+  sources?: Source[];
   onSectionClick?: (section: string) => void;
 }) {
-  const sections = isLatest ? parseSections(message.content) : [];
+  const { body, indices } = extractCitations(message.content);
+  const sections = isLatest ? parseSections(body) : [];
+  const citedSources = sources
+    ? indices.filter((i) => i >= 0 && i < sources.length).map((i) => sources[i])
+    : [];
 
   return (
     <div className={`rounded-lg border overflow-hidden bg-surface ${isLatest ? 'border-brand' : 'border-edge opacity-70'}`}>
@@ -34,7 +48,7 @@ export default function ResponseBlock({
       )}
       <div className="px-4 py-4 prose-field">
         <ReactMarkdown remarkPlugins={[remarkGfm]}>
-          {message.content || '…'}
+          {body || '…'}
         </ReactMarkdown>
       </div>
 
@@ -49,6 +63,27 @@ export default function ResponseBlock({
               {s}
             </button>
           ))}
+        </div>
+      )}
+
+      {citedSources.length > 0 && (
+        <div className="px-4 pb-4 border-t border-edge pt-3">
+          <p className="text-xs font-bold uppercase tracking-widest mb-2 text-muted">Sources for this response</p>
+          <ul className="flex flex-col gap-1.5">
+            {citedSources.map((s, i) => (
+              <li key={i}>
+                <a
+                  href={s.url}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-sm leading-snug hover:underline"
+                  style={{ color: 'var(--amber)' }}
+                >
+                  {s.title}
+                </a>
+              </li>
+            ))}
+          </ul>
         </div>
       )}
     </div>

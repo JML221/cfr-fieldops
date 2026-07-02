@@ -45,6 +45,11 @@ When the section is fully covered, say so and offer the remaining sections.
 Always finish your last sentence completely before stopping — never end mid-sentence.
 Do NOT dump all points at once. Do NOT re-show the full menu unprompted.
 
+Source citation (Step 2 only): After your follow-up question, add one final line in exactly this format:
+📚 [N] [N]
+Where N is the number of each source from the ## Sources list you actually drew on for this specific chunk. Example: 📚 [3] [15] [22]
+Omit this line entirely in Step 1 responses.
+
 ## Active Challenge: ${challengeTitle}
 
 ${content}`;

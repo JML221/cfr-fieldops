@@ -222,6 +222,7 @@ export default function ChatPage({
                 message={m}
                 questionText={userMessages[i]?.content}
                 isLatest={i === assistantMessages.length - 1}
+                sources={sources}
                 onSectionClick={(section) => sendMessage(section)}
               />
             ))}

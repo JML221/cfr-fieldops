@@ -25,7 +25,7 @@ export function formatLessonAsContext(d: LessonContent): string {
     .join('\n\n');
 
   const sourcesBlock = d.sources
-    .map((s) => `- [${s.title}](${s.url})`)
+    .map((s, i) => `[${i + 1}] ${s.title}`)
     .join('\n');
 
   return `## Situation Overview\n${d.situation_overview}\n\n## Armed Groups Reference\n${groupsBlock}\n\n## Lessons Learned (from published literature)\n${lessonsBlock}\n\n## Sources\n${sourcesBlock}`;
