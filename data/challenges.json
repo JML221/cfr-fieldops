@@ -24,6 +24,14 @@
     "tags": ["hybrid warfare", "disinformation", "NATO", "civil resilience", "Russia", "information operations", "cyber"]
   },
   {
+    "id": "child-soldiers-reintegration",
+    "title": "Reintegrating Child Soldiers",
+    "region": "Global / Sub-Saharan Africa, South Asia, Middle East",
+    "summary": "Children associated with armed forces and groups (CAAFAG) require specialized release, interim care, family tracing, psychosocial support, and community reintegration programming. Covers DDR for children, trauma-informed practice, girls associated with armed groups, preventing re-recruitment, and navigating accountability frameworks.",
+    "status": "active",
+    "tags": ["child protection", "DDR", "reintegration", "psychosocial support", "CAAFAG", "child soldiers", "trauma"]
+  },
+  {
     "id": "sahel-armed-actors",
     "title": "Sahel – Armed Actors",
     "region": "West Africa",
